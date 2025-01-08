@@ -12,7 +12,6 @@ async function scheduleHtmlProvider() {
       var match = scriptContent.match(regex);
       if (match) {
         dynamicField = match[1]; // 提取动态字段的值
-        // console.log("匹配到的动态字段：", dynamicField);
       }
     });
 
@@ -36,7 +35,6 @@ async function scheduleHtmlProvider() {
 
     const ret = await res.json();
     const courseList = ret.dateList[0].selectCourseList;
-    // console.log(JSON.stringify(courseList));
     return JSON.stringify(courseList);
 
   } catch (error) {
